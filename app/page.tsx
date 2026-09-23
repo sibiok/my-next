@@ -52,7 +52,7 @@ export default function Home() {
         height={150}
         className="rounded-md mb-4 w-full h-40 object-cover"
       />
-      <h3 className="text-lg font-semibold mb-2">Services</h3>
+      <h3 className="text-lg font-semibold mb-2">Services 1</h3>
       <p className="text-gray-600 text-sm">
         Our servers are optimized for speed, so your site loads instantly for every visitor.
       </p>
@@ -66,7 +66,7 @@ export default function Home() {
         height={150}
         className="rounded-md mb-4 w-full h-40 object-cover"
       />
-      <h3 className="text-lg font-semibold mb-2">Services</h3>
+      <h3 className="text-lg font-semibold mb-2">Services 2</h3>
       <p className="text-gray-600 text-sm">
         Free SSL, daily backups, and proactive monitoring keep your site safe.
       </p>
@@ -80,7 +80,7 @@ export default function Home() {
         height={150}
         className="rounded-md mb-4 w-full h-40 object-cover"
       />
-      <h3 className="text-lg font-semibold mb-2">Services</h3>
+      <h3 className="text-lg font-semibold mb-2">Services 3</h3>
       <p className="text-gray-600 text-sm">
         Our team is available around the clock to help with anything you need.
       </p>
@@ -94,7 +94,7 @@ export default function Home() {
         height={150}
         className="rounded-md mb-4 w-full h-40 object-cover"
       />
-      <h3 className="text-lg font-semibold mb-2">Services</h3>
+      <h3 className="text-lg font-semibold mb-2">Services 4</h3>
       <p className="text-gray-600 text-sm">
         Upgrade your plan anytime as your site grows, with zero downtime.
       </p>

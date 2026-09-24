@@ -1,3 +1,4 @@
+import AnimatedSection from "@/components/AnimatedSection";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -9,8 +10,21 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (   
   <main>
-
-      
+<AnimatedSection>
+        <section className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-brand text-white py-24 px-6 text-center">
+        <p className="text-brand font-semibold tracking-wide uppercase text-sm mb-3">
+          About Us
+        </p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          Hosting Built by People Who Care
+        </h1>
+        <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          Over 20 years of experience keeping websites fast, secure, and
+          online — so you can focus on growing your business.
+        </p>
+      </section>
+      </AnimatedSection>
+      <AnimatedSection>
             {/* Two-column: text left, image right */}
             <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-12 px-4">
               <div>
@@ -31,8 +45,10 @@ export default function ServicesPage() {
                   className="rounded-lg w-full h-auto"
                 />
               </div>
-            </section>
-      
+            </section>      
+      </AnimatedSection>
+
+      <AnimatedSection>
             {/* Two-column: image left, text right */}
             <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-12">
               <div>
@@ -54,6 +70,7 @@ export default function ServicesPage() {
                 </p>
               </div>
             </section>
+            </AnimatedSection>
     </main>
   );
 }

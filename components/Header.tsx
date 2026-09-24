@@ -26,16 +26,17 @@ export default function Header() {
     >
       <div className="container mx-auto flex items-center justify-between px-6">
         <Link href="/">
-          <Image
-            src="/logo1.jpg"
-            alt="My Site logo"
-            width={300}
-            height={72}
-            className={`w-auto transition-all duration-300 ${
-              isScrolled ? "h-8" : "h-10"
-            }`}
-          />
-        </Link>
+        <Image
+          src="/logo1.jpg"
+          alt="My Site logo"
+          width={300}
+          height={72}
+          priority
+          className={`w-auto transition-all duration-300 ${
+            isScrolled ? "h-8" : "h-10"
+          }`}
+        />
+      </Link>
         <Nav />
       </div>
     </header>

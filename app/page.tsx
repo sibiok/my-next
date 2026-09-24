@@ -13,7 +13,6 @@ export default function Home() {
   return (
     <main>
       <PromoPopup />
-
       <Slider />
       {/* Hero section */}
 
@@ -100,7 +99,7 @@ export default function Home() {
 
       {/* Two-column: text left, image right */}
       <AnimatedSection>
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-12 px-4">
+        <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-12 px-4">
           <div>
             <h2 className="font-poppins text-4xl font-bold mb-3">
               Our Story
@@ -156,6 +155,10 @@ export default function Home() {
           <h2 className="font-poppins text-4xl font-bold mb-8 text-center">
             Frequently Asked Questions
           </h2>
+           <p className="text-gray-600 text-lg text-center">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo
+            </p>
           <FaqAccordion />
         </section>
       </AnimatedSection>

@@ -1,11 +1,12 @@
 // components/Footer.tsx
 import Link from "next/link";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { Mail, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="bg-slate-950 text-white">
-      <div className="max-w-6xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 py-16">
         {/* Top section: heading + CTA (left), text + socials (right) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           {/* Left: heading + button */}
@@ -17,8 +18,8 @@ export default function Footer() {
               href="/contact"
               className="inline-flex items-center gap-2 bg-white text-slate-950 px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition-colors"
             >
-              Book a call
-              <ArrowUpRight className="w-4 h-4" />
+              Book a call  <ArrowUpRight className="w-4 h-4" />
+             
             </Link>
           </div>
 
@@ -33,20 +34,20 @@ export default function Footer() {
                 href="mailto:hello@example.com"
                 className="flex items-center justify-center gap-2 border border-gray-700 rounded-full px-4 py-2 text-sm hover:bg-slate-900 transition-colors"
               >
-                <Mail className="w-4 h-4" />
-                Email me
+               <FaFacebookF className="w-4 h-4" />
+                Facebook
               </a>
               <a
                 href="#"
                 className="flex items-center justify-center gap-2 border border-gray-700 rounded-full px-4 py-2 text-sm hover:bg-slate-900 transition-colors"
               >
-                Instagram
+              <FaInstagram className="w-4 h-4" /> Instagram
               </a>
        <a
                 href="#"
                 className="flex items-center justify-center gap-2 border border-gray-700 rounded-full px-4 py-2 text-sm hover:bg-slate-900 transition-colors"
               >
-                Facebook
+                 <FaLinkedinIn className="w-4 h-4" /> LinkedIn
               </a>
               
             </div>

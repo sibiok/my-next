@@ -6,7 +6,8 @@ export default function TopBar() {
   return (
     <div className="bg-brand text-white text-sm border-b border-gray-200">
       <div className="container mx-auto flex items-center justify-between px-6 py-2">  
-          <a href="tel:+15551234567"
+            
+       <a href="tel:+15551234567"
           className="flex items-center gap-2 hover:text-gray-300">
           <Phone className="w-4 h-4" />
           +1 (555) 123-4567

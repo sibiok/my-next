@@ -131,3 +131,11 @@
     @apply font-sans;
   }
 }
+@keyframes fillbar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

@@ -10,6 +10,8 @@ export default function PromoPopup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
   // Auto-open shortly after the page loads
   useEffect(() => {
@@ -19,12 +21,31 @@ export default function PromoPopup() {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // No backend yet — just show a confirmation message for now.
-    // Later you can send this to an API route or a form service.
-    console.log({ name, email, phone });
-    setSubmitted(true);
+    setError("");
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mnpnvezr", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ name, email, phone }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (!isOpen) return null;
@@ -112,11 +133,16 @@ export default function PromoPopup() {
                 />
               </div>
 
+              {error && (
+                <p className="text-red-600 text-sm text-center">{error}</p>
+              )}
+
               <button
                 type="submit"
-                className="bg-brand text-white px-6 py-3 rounded-full font-medium hover:opacity-90 transition-opacity"
+                disabled={isSubmitting}
+                className="bg-brand text-white px-6 py-3 rounded-full font-medium hover:opacity-90 transition-opacity disabled:opacity-60 shadow-md"
               >
-                Claim Offer
+                {isSubmitting ? "Sending..." : "Claim Offer"}
               </button>
             </form>
           </>

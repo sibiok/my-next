@@ -34,7 +34,7 @@ export default function FaqAccordion() {
   };
 
   return (
-    <div className="mx-auto divide-y divide-gray-200 border-t border-b border-gray-200">
+    <div className="max-w-6xl mx-auto px-6 py-16 divide-y divide-gray-200 border-gray-200">
       {faqs.map((faq, index) => {
         const isOpen = openIndex === index;
         return (

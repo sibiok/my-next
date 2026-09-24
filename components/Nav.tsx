@@ -14,8 +14,7 @@ export default function Nav() {
       <button
         className="md:hidden"
         onClick={() => setIsOpen(!isOpen)}
-        aria-label="Toggle menu"
-      >
+        aria-label="Toggle menu">
         {isOpen ? <X className="w-6 h-6 text-gray-900" /> : <Menu className="w-6 h-6 text-gray-900" />}
       </button>
 
@@ -35,7 +34,6 @@ export default function Nav() {
           <Link href="/about" onClick={() => setIsOpen(false)}>About</Link>
           <Link href="/services" onClick={() => setIsOpen(false)}>Services</Link>          
           <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
-
           <Link  className="bg-brand text-white px-6 py-2 rounded-full hover:opacity-90 transition-opacity inline-block" href="tel:9847587606" onClick={() => setIsOpen(false)}>Call us 9847587606</Link>
         </div>
       )}

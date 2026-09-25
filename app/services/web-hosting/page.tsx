@@ -1,5 +1,4 @@
 import AnimatedSection from "@/components/AnimatedSection";
-import ServicesGrid from "@/components/ServicesGrid";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -11,19 +10,13 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (   
   <main>
-
-
-    <AnimatedSection>
-    <ServicesGrid />
-    </AnimatedSection>
-
 <AnimatedSection>
         <section className="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-brand text-white py-24 px-6 text-center">
         <p className="text-brand font-semibold tracking-wide uppercase text-sm mb-3">
           About Us
         </p>
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Hosting   
+          Hosting
         </h1>
         <p className="text-gray-300 text-lg max-w-2xl mx-auto">
           Over 20 years of experience keeping websites fast, secure, and

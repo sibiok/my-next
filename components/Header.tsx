@@ -24,7 +24,7 @@ export default function Header() {
         isScrolled ? "py-2" : "py-4"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between px-6">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6">
         <Link href="/">
         <Image
           src="/logo1.jpg"

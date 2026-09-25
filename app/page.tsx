@@ -3,7 +3,9 @@ import PromoPopup from "@/components/PromoPopup";
 import Slider from "@/components/Slider";
 import FaqAccordion from "@/components/FaqAccordion";
 import GoogleReviews from "@/components/GoogleReviews";
+import Stats from "@/components/Stats";
 import WhyUs from "@/components/WhyUs";
+import ServicesGrid from "@/components/ServicesGrid";
 import AnimatedSection from "@/components/AnimatedSection";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,82 +18,10 @@ export default function Home() {
       <Slider />
       {/* Hero section */}
 
-      {/* 4-column features section */}
-      <AnimatedSection>
-        <section className="py-24">
-          <div className="text-center mb-12">
-            <h2 className="font-poppins text-4xl font-bold mb-3">
-              Our Services
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo
-            </p>
-          </div>
+<AnimatedSection>         
+<ServicesGrid />
+</AnimatedSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="flex flex-col items-center text-center">
-              <Image
-                src="/feature-1.jpg"
-                alt="Fast hosting"
-                width={495}
-                height={325}
-                className="rounded-md mb-4 w-full h-60 object-cover"
-              />
-              <h3 className="text-lg font-semibold mb-2">Services 1</h3>
-              <p className="text-gray-600">
-                Our servers are optimized for speed, so your site loads
-                instantly for every visitor.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-              <Image
-                src="/feature-2.jpg"
-                alt="Secure hosting"
-                width={200}
-                height={150}
-                className="rounded-md mb-4 w-full h-60 object-cover"
-              />
-              <h3 className="text-lg font-semibold mb-2">Services 2</h3>
-              <p className="text-gray-600">
-                Free SSL, daily backups, and proactive monitoring keep your
-                site safe.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-              <Image
-                src="/feature-3.jpg"
-                alt="24/7 support"
-                width={200}
-                height={150}
-                className="rounded-md mb-4 w-full h-60 object-cover"
-              />
-              <h3 className="text-lg font-semibold mb-2">Services 3</h3>
-              <p className="text-gray-600">
-                Our team is available around the clock to help with anything
-                you need.
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center text-center">
-              <Image
-                src="/feature-4.jpg"
-                alt="Easy scaling"
-                width={200}
-                height={150}
-                className="rounded-md mb-4 w-full h-60 object-cover"
-              />
-              <h3 className="text-lg font-semibold mb-2">Services 4</h3>
-              <p className="text-gray-600 text-sm">
-                Upgrade your plan anytime as your site grows, with zero
-                downtime.
-              </p>
-            </div>
-          </div>
-        </section>
-      </AnimatedSection>
 
       <AnimatedSection>
         <WhyUs />
@@ -101,6 +31,11 @@ export default function Home() {
       <AnimatedSection>
         <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-12 px-4">
           <div>
+       <div className="flex items-center gap-4 mb-4">
+          <span className="w-16 h-px bg-brand" />
+          <p className="text-brand font-semibold uppercase tracking-widest text-sm">
+          About Us</p>
+        </div>
             <h2 className="font-poppins text-4xl font-bold mb-3">
               Our Story
             </h2>
@@ -135,9 +70,19 @@ export default function Home() {
         </section>
       </AnimatedSection>
 
+<AnimatedSection>
+  <Stats />
+</AnimatedSection>
+
       {/* Reviews section */}
       <AnimatedSection>
         <section className="py-12 px-4">
+        <div className="flex items-center justify-center gap-4 mb-4">
+          <span className="w-16 h-px bg-brand" />
+          <p className="text-brand font-semibold uppercase tracking-widest text-sm">
+          About Us</p>
+        </div>
+
           <h2 className="font-poppins text-4xl font-bold mb-3 text-center">
             What Our Customers Say
           </h2>
@@ -148,6 +93,7 @@ export default function Home() {
           <GoogleReviews />
         </section>
       </AnimatedSection>
+     
 
       {/* FAQ section */}
       <AnimatedSection>

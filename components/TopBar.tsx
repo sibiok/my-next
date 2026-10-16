@@ -10,7 +10,7 @@ export default function TopBar() {
        <a href="tel:+15551234567"
           className="flex items-center gap-2 hover:text-gray-300">
           <Phone className="w-4 h-4" />
-          +1 (555) 123-4567
+         9847 123456
         </a>
 
         <div className="flex items-center gap-4">
